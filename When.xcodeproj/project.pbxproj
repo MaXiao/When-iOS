@@ -14,6 +14,26 @@
 		D1C9699C297C86CA00D08D4A /* WhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9699B297C86CA00D08D4A /* WhenTests.swift */; };
 		D1C969A6297C86CA00D08D4A /* WhenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969A5297C86CA00D08D4A /* WhenUITests.swift */; };
 		D1C969A8297C86CA00D08D4A /* WhenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969A7297C86CA00D08D4A /* WhenUITestsLaunchTests.swift */; };
+		D1C969B8297C871F00D08D4A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969B7297C871F00D08D4A /* RootView.swift */; };
+		D1C969BA297C872800D08D4A /* RootFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969B9297C872800D08D4A /* RootFeature.swift */; };
+		D1C969BD297C875E00D08D4A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D1C969BC297C875E00D08D4A /* ComposableArchitecture */; };
+		D1C969BF297C87D300D08D4A /* GroupsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969BE297C87D300D08D4A /* GroupsFeature.swift */; };
+		D1C969C1297C887E00D08D4A /* PersonsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969C0297C887E00D08D4A /* PersonsFeature.swift */; };
+		D1C969C5297C89D800D08D4A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969C4297C89D800D08D4A /* Person.swift */; };
+		D1C969C7297C89DD00D08D4A /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969C6297C89DD00D08D4A /* Group.swift */; };
+		D1C969C9297C89E200D08D4A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969C8297C89E200D08D4A /* City.swift */; };
+		D1C969CB297C95B700D08D4A /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969CA297C95B700D08D4A /* GroupListView.swift */; };
+		D1C969CD297C96A600D08D4A /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969CC297C96A600D08D4A /* PersonListView.swift */; };
+		D1C969CF297C9F3200D08D4A /* CreatePersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969CE297C9F3200D08D4A /* CreatePersonView.swift */; };
+		D1C969D1297C9F4100D08D4A /* CityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969D0297C9F4100D08D4A /* CityListView.swift */; };
+		D1C969D3297CA24700D08D4A /* CitiesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969D2297CA24700D08D4A /* CitiesFeature.swift */; };
+		D1C969D5297CAB3600D08D4A /* CreatePersonFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969D4297CAB3600D08D4A /* CreatePersonFeature.swift */; };
+		D1C969D7297DDE2900D08D4A /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969D6297DDE2900D08D4A /* GroupView.swift */; };
+		D1C969D9297DDE2F00D08D4A /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969D8297DDE2F00D08D4A /* CreateGroupView.swift */; };
+		D1C969DB297DDE5100D08D4A /* CreateGroupFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969DA297DDE5100D08D4A /* CreateGroupFeature.swift */; };
+		D1C969DD297DDE5A00D08D4A /* GroupFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969DC297DDE5A00D08D4A /* GroupFeature.swift */; };
+		D1C969DF297DE38000D08D4A /* PersonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969DE297DE38000D08D4A /* PersonSelectionView.swift */; };
+		D1C969E1297DE38D00D08D4A /* PersonSelectionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969E0297DE38D00D08D4A /* PersonSelectionFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +64,25 @@
 		D1C969A1297C86CA00D08D4A /* WhenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C969A5297C86CA00D08D4A /* WhenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenUITests.swift; sourceTree = "<group>"; };
 		D1C969A7297C86CA00D08D4A /* WhenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1C969B7297C871F00D08D4A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D1C969B9297C872800D08D4A /* RootFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeature.swift; sourceTree = "<group>"; };
+		D1C969BE297C87D300D08D4A /* GroupsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsFeature.swift; sourceTree = "<group>"; };
+		D1C969C0297C887E00D08D4A /* PersonsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsFeature.swift; sourceTree = "<group>"; };
+		D1C969C4297C89D800D08D4A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D1C969C6297C89DD00D08D4A /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		D1C969C8297C89E200D08D4A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		D1C969CA297C95B700D08D4A /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
+		D1C969CC297C96A600D08D4A /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
+		D1C969CE297C9F3200D08D4A /* CreatePersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonView.swift; sourceTree = "<group>"; };
+		D1C969D0297C9F4100D08D4A /* CityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListView.swift; sourceTree = "<group>"; };
+		D1C969D2297CA24700D08D4A /* CitiesFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesFeature.swift; sourceTree = "<group>"; };
+		D1C969D4297CAB3600D08D4A /* CreatePersonFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonFeature.swift; sourceTree = "<group>"; };
+		D1C969D6297DDE2900D08D4A /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		D1C969D8297DDE2F00D08D4A /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
+		D1C969DA297DDE5100D08D4A /* CreateGroupFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupFeature.swift; sourceTree = "<group>"; };
+		D1C969DC297DDE5A00D08D4A /* GroupFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeature.swift; sourceTree = "<group>"; };
+		D1C969DE297DE38000D08D4A /* PersonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSelectionView.swift; sourceTree = "<group>"; };
+		D1C969E0297DE38D00D08D4A /* PersonSelectionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSelectionFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C969BD297C875E00D08D4A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +134,11 @@
 		D1C96989297C86C800D08D4A /* When */ = {
 			isa = PBXGroup;
 			children = (
+				D1C969C3297C89C700D08D4A /* Models */,
+				D1C969C2297C89BB00D08D4A /* Features */,
 				D1C9698A297C86C800D08D4A /* WhenApp.swift */,
+				D1C969B7297C871F00D08D4A /* RootView.swift */,
+				D1C969B9297C872800D08D4A /* RootFeature.swift */,
 				D1C9698C297C86C800D08D4A /* ContentView.swift */,
 				D1C9698E297C86C900D08D4A /* Assets.xcassets */,
 				D1C96990297C86C900D08D4A /* Preview Content */,
@@ -127,6 +171,61 @@
 			path = WhenUITests;
 			sourceTree = "<group>";
 		};
+		D1C969B4297C86E800D08D4A /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				D1C969BE297C87D300D08D4A /* GroupsFeature.swift */,
+				D1C969CA297C95B700D08D4A /* GroupListView.swift */,
+				D1C969D6297DDE2900D08D4A /* GroupView.swift */,
+				D1C969DC297DDE5A00D08D4A /* GroupFeature.swift */,
+				D1C969D8297DDE2F00D08D4A /* CreateGroupView.swift */,
+				D1C969DA297DDE5100D08D4A /* CreateGroupFeature.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		D1C969B5297C86FF00D08D4A /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				D1C969C0297C887E00D08D4A /* PersonsFeature.swift */,
+				D1C969CC297C96A600D08D4A /* PersonListView.swift */,
+				D1C969CE297C9F3200D08D4A /* CreatePersonView.swift */,
+				D1C969D4297CAB3600D08D4A /* CreatePersonFeature.swift */,
+				D1C969DE297DE38000D08D4A /* PersonSelectionView.swift */,
+				D1C969E0297DE38D00D08D4A /* PersonSelectionFeature.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		D1C969B6297C870700D08D4A /* City */ = {
+			isa = PBXGroup;
+			children = (
+				D1C969D0297C9F4100D08D4A /* CityListView.swift */,
+				D1C969D2297CA24700D08D4A /* CitiesFeature.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		D1C969C2297C89BB00D08D4A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D1C969B6297C870700D08D4A /* City */,
+				D1C969B5297C86FF00D08D4A /* Person */,
+				D1C969B4297C86E800D08D4A /* Group */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D1C969C3297C89C700D08D4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1C969C4297C89D800D08D4A /* Person.swift */,
+				D1C969C6297C89DD00D08D4A /* Group.swift */,
+				D1C969C8297C89E200D08D4A /* City.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +242,9 @@
 			dependencies = (
 			);
 			name = When;
+			packageProductDependencies = (
+				D1C969BC297C875E00D08D4A /* ComposableArchitecture */,
+			);
 			productName = When;
 			productReference = D1C96987297C86C800D08D4A /* When.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +317,9 @@
 				Base,
 			);
 			mainGroup = D1C9697E297C86C800D08D4A;
+			packageReferences = (
+				D1C969BB297C875E00D08D4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = D1C96988297C86C800D08D4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +362,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C969BA297C872800D08D4A /* RootFeature.swift in Sources */,
+				D1C969C1297C887E00D08D4A /* PersonsFeature.swift in Sources */,
+				D1C969D7297DDE2900D08D4A /* GroupView.swift in Sources */,
+				D1C969CB297C95B700D08D4A /* GroupListView.swift in Sources */,
+				D1C969C9297C89E200D08D4A /* City.swift in Sources */,
 				D1C9698D297C86C800D08D4A /* ContentView.swift in Sources */,
+				D1C969D3297CA24700D08D4A /* CitiesFeature.swift in Sources */,
+				D1C969C7297C89DD00D08D4A /* Group.swift in Sources */,
+				D1C969DD297DDE5A00D08D4A /* GroupFeature.swift in Sources */,
+				D1C969DB297DDE5100D08D4A /* CreateGroupFeature.swift in Sources */,
+				D1C969BF297C87D300D08D4A /* GroupsFeature.swift in Sources */,
+				D1C969CF297C9F3200D08D4A /* CreatePersonView.swift in Sources */,
+				D1C969DF297DE38000D08D4A /* PersonSelectionView.swift in Sources */,
+				D1C969D1297C9F4100D08D4A /* CityListView.swift in Sources */,
+				D1C969C5297C89D800D08D4A /* Person.swift in Sources */,
 				D1C9698B297C86C800D08D4A /* WhenApp.swift in Sources */,
+				D1C969CD297C96A600D08D4A /* PersonListView.swift in Sources */,
+				D1C969D9297DDE2F00D08D4A /* CreateGroupView.swift in Sources */,
+				D1C969E1297DE38D00D08D4A /* PersonSelectionFeature.swift in Sources */,
+				D1C969D5297CAB3600D08D4A /* CreatePersonFeature.swift in Sources */,
+				D1C969B8297C871F00D08D4A /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +707,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1C969BB297C875E00D08D4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1C969BC297C875E00D08D4A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1C969BB297C875E00D08D4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1C9697F297C86C800D08D4A /* Project object */;
 }
