@@ -21,12 +21,8 @@ struct GroupView: View {
             VStack {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
-                        ForEachStore(
-                            self.store.scope(
-                                state: \.persons,
-                                action: GroupFeature.Action.person(id:action:)))
-                        { cellStore in
-                            GroupPersonView(store: cellStore, displayTime: viewStore.binding(get: \.displayTime, send: GroupFeature.Action.updateDisplayTime))
+                        ForEach(viewStore.group.persons) { person in
+                            GroupPersonView(viewState: GroupPersonViewState(person: person, displayTime: viewStore.displayTime))
                         }
                     }
                     .padding(.horizontal)

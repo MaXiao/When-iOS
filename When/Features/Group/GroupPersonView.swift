@@ -10,17 +10,14 @@ import Foundation
 import SwiftUI
 
 struct GroupPersonView: View {
-    let store: StoreOf<GroupPersonFeature>
-    @Binding var displayTime: Date
+    let viewState: GroupPersonViewState
 
     var body: some View {
-        WithViewStore(self.store, observe: { $0 }) { viewStore in
-            let person = viewStore.person
-            VStack(alignment: .leading) {
-                Text(person.name)
-                Text(viewStore.dateFormatter.string(from: displayTime))
-                Text("\(person.city.name), \(person.city.country)")
-            }
+        let person = viewState.person
+        VStack(alignment: .leading) {
+            Text(person.name)
+            Text(viewState.timeString)
+            Text("\(person.city.name), \(person.city.country)")
         }
     }
 }

@@ -37,6 +37,7 @@
 		D1C969E3297E35BC00D08D4A /* GroupPersonFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969E2297E35BC00D08D4A /* GroupPersonFeature.swift */; };
 		D1C969E5297E3A1400D08D4A /* GroupPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969E4297E3A1400D08D4A /* GroupPersonView.swift */; };
 		D1C969E8297F7EDA00D08D4A /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969E7297F7EDA00D08D4A /* Date+Utils.swift */; };
+		D1C969EA297F841000D08D4A /* GroupPersonViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969E9297F841000D08D4A /* GroupPersonViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		D1C969E2297E35BC00D08D4A /* GroupPersonFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPersonFeature.swift; sourceTree = "<group>"; };
 		D1C969E4297E3A1400D08D4A /* GroupPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPersonView.swift; sourceTree = "<group>"; };
 		D1C969E7297F7EDA00D08D4A /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		D1C969E9297F841000D08D4A /* GroupPersonViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPersonViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				D1C969DA297DDE5100D08D4A /* CreateGroupFeature.swift */,
 				D1C969E2297E35BC00D08D4A /* GroupPersonFeature.swift */,
 				D1C969E4297E3A1400D08D4A /* GroupPersonView.swift */,
+				D1C969E9297F841000D08D4A /* GroupPersonViewState.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				D1C969C9297C89E200D08D4A /* City.swift in Sources */,
 				D1C9698D297C86C800D08D4A /* ContentView.swift in Sources */,
 				D1C969D3297CA24700D08D4A /* CitiesFeature.swift in Sources */,
+				D1C969EA297F841000D08D4A /* GroupPersonViewState.swift in Sources */,
 				D1C969C7297C89DD00D08D4A /* Group.swift in Sources */,
 				D1C969DD297DDE5A00D08D4A /* GroupFeature.swift in Sources */,
 				D1C969DB297DDE5100D08D4A /* CreateGroupFeature.swift in Sources */,
