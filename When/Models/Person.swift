@@ -11,6 +11,12 @@ struct Person: Codable {
     var id: UUID
     var name: String
     var city: City
+
+    enum CodingKeys: CodingKey {
+        case id
+        case name
+        case city
+    }
 }
 
 extension Person: Identifiable {}

@@ -10,8 +10,7 @@ import Foundation
 
 struct GroupsFeature: ReducerProtocol {
     struct State: Equatable {
-        var groups: [Group] = []
-        var isNavigationActive = false
+        var groups: [Group] = Group.mockList
         var createGroup = CreateGroupFeature.State()
     }
 

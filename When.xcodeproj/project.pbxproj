@@ -34,6 +34,9 @@
 		D1C969DD297DDE5A00D08D4A /* GroupFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969DC297DDE5A00D08D4A /* GroupFeature.swift */; };
 		D1C969DF297DE38000D08D4A /* PersonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969DE297DE38000D08D4A /* PersonSelectionView.swift */; };
 		D1C969E1297DE38D00D08D4A /* PersonSelectionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969E0297DE38D00D08D4A /* PersonSelectionFeature.swift */; };
+		D1C969E3297E35BC00D08D4A /* GroupPersonFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969E2297E35BC00D08D4A /* GroupPersonFeature.swift */; };
+		D1C969E5297E3A1400D08D4A /* GroupPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969E4297E3A1400D08D4A /* GroupPersonView.swift */; };
+		D1C969E8297F7EDA00D08D4A /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C969E7297F7EDA00D08D4A /* Date+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		D1C969DC297DDE5A00D08D4A /* GroupFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeature.swift; sourceTree = "<group>"; };
 		D1C969DE297DE38000D08D4A /* PersonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSelectionView.swift; sourceTree = "<group>"; };
 		D1C969E0297DE38D00D08D4A /* PersonSelectionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSelectionFeature.swift; sourceTree = "<group>"; };
+		D1C969E2297E35BC00D08D4A /* GroupPersonFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPersonFeature.swift; sourceTree = "<group>"; };
+		D1C969E4297E3A1400D08D4A /* GroupPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPersonView.swift; sourceTree = "<group>"; };
+		D1C969E7297F7EDA00D08D4A /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,7 @@
 		D1C96989297C86C800D08D4A /* When */ = {
 			isa = PBXGroup;
 			children = (
+				D1C969E6297F7ECB00D08D4A /* Utils */,
 				D1C969C3297C89C700D08D4A /* Models */,
 				D1C969C2297C89BB00D08D4A /* Features */,
 				D1C9698A297C86C800D08D4A /* WhenApp.swift */,
@@ -180,6 +187,8 @@
 				D1C969DC297DDE5A00D08D4A /* GroupFeature.swift */,
 				D1C969D8297DDE2F00D08D4A /* CreateGroupView.swift */,
 				D1C969DA297DDE5100D08D4A /* CreateGroupFeature.swift */,
+				D1C969E2297E35BC00D08D4A /* GroupPersonFeature.swift */,
+				D1C969E4297E3A1400D08D4A /* GroupPersonView.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -224,6 +233,14 @@
 				D1C969C8297C89E200D08D4A /* City.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D1C969E6297F7ECB00D08D4A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D1C969E7297F7EDA00D08D4A /* Date+Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C969BA297C872800D08D4A /* RootFeature.swift in Sources */,
+				D1C969E3297E35BC00D08D4A /* GroupPersonFeature.swift in Sources */,
 				D1C969C1297C887E00D08D4A /* PersonsFeature.swift in Sources */,
 				D1C969D7297DDE2900D08D4A /* GroupView.swift in Sources */,
 				D1C969CB297C95B700D08D4A /* GroupListView.swift in Sources */,
@@ -372,7 +390,9 @@
 				D1C969C7297C89DD00D08D4A /* Group.swift in Sources */,
 				D1C969DD297DDE5A00D08D4A /* GroupFeature.swift in Sources */,
 				D1C969DB297DDE5100D08D4A /* CreateGroupFeature.swift in Sources */,
+				D1C969E5297E3A1400D08D4A /* GroupPersonView.swift in Sources */,
 				D1C969BF297C87D300D08D4A /* GroupsFeature.swift in Sources */,
+				D1C969E8297F7EDA00D08D4A /* Date+Utils.swift in Sources */,
 				D1C969CF297C9F3200D08D4A /* CreatePersonView.swift in Sources */,
 				D1C969DF297DE38000D08D4A /* PersonSelectionView.swift in Sources */,
 				D1C969D1297C9F4100D08D4A /* CityListView.swift in Sources */,

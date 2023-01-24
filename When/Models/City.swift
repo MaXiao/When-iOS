@@ -20,10 +20,10 @@ extension City: Identifiable {
 extension City: Equatable {}
 
 extension City {
-    static let toronto = City(name: "Toronto", country: "Canada", timezone: "EST")
-    static let beijing = City(name: "Beijing", country: "China", timezone: "CST")
-    static let london = City(name: "London", country: "UK", timezone: "GMT")
-    static let tokyo = City(name: "Tokyo", country: "Japan", timezone: "JST")
-    static let queenstown = City(name: "Queenstown", country: "New Zealand", timezone: "NZD")
+    static let toronto = City(name: "Toronto", country: "Canada", timezone: "America/Toronto")
+    static let beijing = City(name: "Beijing", country: "China", timezone: "Asia/Shanghai")
+    static let london = City(name: "London", country: "UK", timezone: "Europe/London")
+    static let tokyo = City(name: "Tokyo", country: "Japan", timezone: "Asia/Tokyo")
+    static let queenstown = City(name: "Queenstown", country: "New Zealand", timezone: "Pacific/Auckland")
     static let mockList = [beijing, london, queenstown, tokyo, toronto]
 }

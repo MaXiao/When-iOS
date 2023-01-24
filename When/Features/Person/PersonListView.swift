@@ -14,26 +14,24 @@ struct PersonListView: View {
 
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
-            NavigationView {
-                List(viewStore.persons) { person in
-                    Text(person.name)
-                }
-                .toolbar {
-                    ToolbarItem(placement: .primaryAction) {
-                        NavigationLink(
-                            destination: IfLetStore(
-                                self.store.scope(state: \.createPerson, action: PersonsFeature.Action.createPerson)
-                            ) {
-                                CreatePersonView(store: $0)
-                            },
-                            isActive: viewStore.binding(get: \.isNavigationActive, send: PersonsFeature.Action.navigate)
+
+            List(viewStore.persons) { person in
+                Text(person.name)
+            }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    NavigationLink(
+                        destination: IfLetStore(
+                            self.store.scope(state: \.createPerson, action: PersonsFeature.Action.createPerson)
                         ) {
-                            Text("Add")
-                        }
+                            CreatePersonView(store: $0)
+                        },
+                        isActive: viewStore.binding(get: \.isNavigationActive, send: PersonsFeature.Action.navigate)
+                    ) {
+                        Text("Add")
                     }
                 }
             }
-            .navigationViewStyle(.stack)
         }
     }
 }

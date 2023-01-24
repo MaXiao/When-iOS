@@ -16,3 +16,11 @@ struct Group: Codable {
 extension Group: Identifiable {}
 
 extension Group: Equatable {}
+
+extension Group {
+    static let mockList = [
+        Group(id: UUID(uuidString: "00000000-0000-0000-0000-000000000000")!,
+              name: "Game",
+              persons: Person.mockList)
+    ]
+}
