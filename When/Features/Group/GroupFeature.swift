@@ -12,21 +12,17 @@ struct GroupFeature: ReducerProtocol {
     struct State: Equatable {
         var group: Group
         var displayTime: Date = .init()
-        var persons: IdentifiedArrayOf<GroupPersonFeature.State> = []
         var sliderValue = 0.0
-        private let dateFormatter = {
+        let currentDate = Date()
+        
+        private var dateFormatter: DateFormatter {
             let formatter = DateFormatter()
             formatter.dateFormat = NORMAL_DATE_FORMAT
             return formatter
-        }()
+        }
 
         var timeString: String {
             dateFormatter.string(from: displayTime)
-        }
-
-        init(group: Group) {
-            self.group = group
-            self.persons = generatePersonState(persons: group.persons)
         }
     }
 
@@ -45,12 +41,12 @@ struct GroupFeature: ReducerProtocol {
                 return .none
             case let .sliderValueUpdate(value):
                 state.sliderValue = value
-
+                let date = state.currentDate
                 return .task {
                     let hour = Int(value) / 60
                     let min = Int(value) % 60
-                    guard let date = Calendar.current.date(bySettingHour: hour, minute: min, second: 0, of: Date()) else {
-                        return .updateDisplayTime(Date())
+                    guard let date = Calendar.current.date(bySettingHour: hour, minute: min, second: 0, of: date) else {
+                        return .updateDisplayTime(date)
                     }
                     return .updateDisplayTime(date)
                 }
@@ -64,15 +60,5 @@ struct GroupFeature: ReducerProtocol {
                 return .none
             }
         }
-        .forEach(\.persons, action: /Action.person) {
-            GroupPersonFeature()
-        }
     }
-}
-
-private func generatePersonState(persons: [Person]) -> IdentifiedArrayOf<GroupPersonFeature.State> {
-    let states = persons.map { p in
-        GroupPersonFeature.State(person: p)
-    }
-    return .init(uniqueElements: states)
 }

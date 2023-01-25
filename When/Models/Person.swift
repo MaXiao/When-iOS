@@ -25,11 +25,13 @@ extension Person: Equatable {}
 
 extension Person {
     static let mockList = [
-        Person(id: UUID(uuidString: "00000000-0000-0000-0000-000000000000")!,
-               name: "Xiao",
-               city: City.toronto),
+        mockX,
         Person(id: UUID(uuidString: "00000000-0000-0000-0000-000000000001")!,
                name: "Huan",
                city: City.beijing)
     ]
+    
+    static let mockX = Person(id: UUID(uuidString: "00000000-0000-0000-0000-000000000000")!,
+                              name: "Xiao",
+                              city: City.toronto)
 }

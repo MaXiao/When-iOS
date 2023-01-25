@@ -11,7 +11,6 @@ import Foundation
 struct GroupPersonFeature: ReducerProtocol {
     struct State: Equatable, Identifiable {
         var person: Person
-        var displayTime: Date = .init()
         var isNightTime = false
         var dateFormatter: DateFormatter
 
@@ -28,9 +27,16 @@ struct GroupPersonFeature: ReducerProtocol {
                 return formatter
             }()
         }
+        
+        func stringFrom(_ time: Date) -> String {
+            return dateFormatter.string(from: time)
+        }
     }
 
-    enum Action: Equatable {}
+    enum Action: Equatable {
+        // potential cell actions like lock an attendee
+        // to make sure one can only choose time that works for them
+    }
 
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {}
 }
