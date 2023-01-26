@@ -50,13 +50,19 @@ struct GroupView: View {
                     .alignmentGuide(HorizontalAlignment.trailing) { d in
                         d[.trailing]
                     }
-                    Slider(
-                        value: viewStore.binding(get: \.sliderValue, send: GroupFeature.Action.sliderValueUpdate),
-                        in: 0 ... MIN_PER_DAY,
-                        step: STEP)
-                        .padding(.bottom, 30)
+//                    Slider(
+//                        value: viewStore.binding(get: \.sliderValue, send: GroupFeature.Action.sliderValueUpdate),
+//                        in: 0 ... MIN_PER_DAY,
+//                        step: STEP)
+//                        .padding(.bottom, 30)
+//                        .alignmentGuide(.top) { d in
+//                            return d[.top] - 100
+//                        }
+                    ArcSlider()
+                        .frame(width:300, height: 300)
+                        .background(.cyan)
                         .alignmentGuide(.top) { d in
-                            return d[.top] - 100
+                            return d[.top] - 50
                         }
                 }
                 .frame(height: 150, alignment: .top)
