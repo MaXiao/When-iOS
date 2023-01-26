@@ -28,9 +28,12 @@ extension Person {
         mockX,
         Person(id: UUID(uuidString: "00000000-0000-0000-0000-000000000001")!,
                name: "Huan",
-               city: City.beijing)
+               city: City.beijing),
+        Person(id: UUID(uuidString: "00000000-0000-0000-0000-000000000002")!,
+               name: "John",
+               city: City.queenstown)
     ]
-    
+
     static let mockX = Person(id: UUID(uuidString: "00000000-0000-0000-0000-000000000000")!,
                               name: "Xiao",
                               city: City.toronto)

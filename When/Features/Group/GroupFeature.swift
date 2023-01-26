@@ -53,7 +53,6 @@ struct GroupFeature: ReducerProtocol {
             case let .updateSliderValueByDate(date):
                 let cal = Calendar.current.dateComponents([.hour, .minute], from: date)
                 let value = Double(cal.hour! * 60 + cal.minute!)
-                print(value)
                 state.sliderValue = value
                 return .none
             default:

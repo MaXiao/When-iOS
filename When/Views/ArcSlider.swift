@@ -8,68 +8,79 @@
 import Foundation
 import SwiftUI
 
-private let THUMB_SIZE = 20.0
+private let THUMB_SIZE = 30.0
 private let CIRCLE_RATIO = 1.5
 
 struct ArcSlider: View {
-    @State var toAngle: Double = 0
+    @Binding var value: Double
+    var range: ClosedRange<Double> = 0.0 ... 1.0
+    var step: Double = 0.01
+
+    private let boundAngle = asin(1.0 / CIRCLE_RATIO)
 
     var body: some View {
         GeometryReader { geometry in
             let width = geometry.size.width
             let height = geometry.size.height
+            let radius = width * CIRCLE_RATIO / 2
 
             ZStack {
                 Circle()
-                    .path(in: CGRect(x: -width * ((CIRCLE_RATIO - 1) / 2.0), y: 0, width: width * CIRCLE_RATIO, height: width * CIRCLE_RATIO))
+                    .path(in: CGRect(x: -width * ((CIRCLE_RATIO - 1) / 2.0), y: 0, width: radius * 2, height: radius * 2))
                     .stroke(.black, style: StrokeStyle(lineWidth: 1, dash: [4]))
                 Image(systemName: "sun.max.circle")
-                    .font(.system(size: 20))
-                    .frame(width: 20, height: 20)
-                    .background(.red)
+                    .font(.system(size: THUMB_SIZE))
+                    .fontWeight(.light)
+                    .frame(width: THUMB_SIZE, height: THUMB_SIZE)
                     .offset(y: -height / 2)
-                    .rotationEffect(.init(degrees: toAngle), anchor: .init(x: 0.5, y: (width * CIRCLE_RATIO - height + THUMB_SIZE) / 2 / THUMB_SIZE))
+                    .rotationEffect(.init(degrees: angleFrom(value: value)), anchor: .init(x: 0.5, y: (width * CIRCLE_RATIO - height + THUMB_SIZE) / 2 / THUMB_SIZE))
                     .gesture(
                         DragGesture()
                             .onChanged { value in
                                 onDrag(value: value, parentSize: geometry.size)
                             }
                     )
-                Circle()
-                    .frame(width: 2, height: 2)
-                    .background(.red)
             }
         }
     }
 
     private func onDrag(value: DragGesture.Value, parentSize: CGSize) {
-        let vector = CGVector(dx: value.location.x, dy: value.location.y)
-
+        let vector = value.location
         let radius = parentSize.width * CIRCLE_RATIO / 2
         let center = CGPoint(x: radius, y: radius)
-        print("vector \(vector.dx - 10) \(vector.dy - 10)")
-        let radians = atan2(center.y - parentSize.height / 2 - (vector.dy - 10), vector.dx - 10)
-        var angle = radians * 180 / .pi
+        let radians = atan2(center.y - parentSize.height / 2 - (vector.y - THUMB_SIZE / 2), vector.x - THUMB_SIZE / 2)
+        var angle = angleFromRadians(radians)
         if angle < 0 {
             angle = angle + 360
         }
-        toAngle = 90 - angle
-        let r = radiansFromAngle(angle)
-        print("angle \(angle), radians: \(r), x: \(radius * cos(r)), y: \(radius * sin(r))")
+        // origin location is 90 degrees
+        angle = 90 - angle
+        // keep angle in the range of [-bound, bound]
+        let boundDegree = angleFromRadians(boundAngle)
+
+        angle = max(min(angle, boundDegree), -boundDegree)
+        let progress = (angle + boundDegree) / (boundDegree * 2)
+        let convertToValue = (range.upperBound - range.lowerBound) * progress + range.lowerBound
+        let trimWithStep = floor(convertToValue / step) * step
+        self.value = trimWithStep
+    }
+
+    private func angleFrom(value: Double) -> Double {
+        let percent = (value - range.lowerBound) / (range.upperBound - range.lowerBound)
+        let angle = boundAngle * 2 * percent - boundAngle
+        return angleFromRadians(angle)
     }
 
     private func angleFromRadians(_ radians: Double) -> Double {
         return radians * 180 / .pi
     }
-
-    private func radiansFromAngle(_ angle: Double) -> Double {
-        return angle * .pi / 180
-    }
 }
 
 struct ArcSlider_Preview: PreviewProvider {
+    @State var value: Double = 0
+
     static var previews: some View {
-        ArcSlider()
+        ArcSlider(value: .constant(0.75))
             .frame(width: 300, height: 100)
             .background(.cyan)
     }
